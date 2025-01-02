@@ -125,9 +125,9 @@ public class ApiConfig {
         }
         return "".getBytes();
     }
-
+     // 内置订阅线路
     public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
-        String apiUrl = Hawk.get(HawkConfig.API_URL, "");
+        String apiUrl = Hawk.get(HawkConfig.API_URL, "https://hao.iam7.cn/Tvbox/api.json");
         if (apiUrl.isEmpty()) {
             callback.error("-1");
             return;
